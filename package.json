@@ -1,0 +1,15 @@
+{
+  "name": "article-extractor-worker",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Deterministic server-side article extraction backend for ARTICLE EXTRACTOR. No AI and no external article extraction API.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types",
+    "dry-run": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+name = "article-extractor-worker"
+main = "src/index.ts"
+compatibility_date = "2026-10-08"
+
+# ARTICLE EXTRACTOR target workload:
+# 5,000 extraction requests/day.
+# This is a planning/monitoring target, not a hard daily counter.
+#
+# Cloudflare Workers Free currently allows 100,000 inbound requests/day.
+# No AI bindings, databases, queues, or third-party article-extraction APIs are used.
+[vars]
+ALLOWED_ORIGIN = "*"
+EXPECTED_DAILY_REQUESTS = "5000"
+MAX_REDIRECTS = "5"
+MAX_HTML_BYTES = "5000000"
+FETCH_TIMEOUT_MS = "12000"
+MAX_BODY_CHARS = "120000"
